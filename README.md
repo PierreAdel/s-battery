@@ -50,7 +50,15 @@ Create a production build:
 npm run build
 ```
 
-### 5. Docker Deployment
+### 5. Production
+
+Start the production server:
+
+```bash
+npm run start
+```
+
+### 6. Docker Deployment
 
 Build and run the app using Docker:
 
@@ -59,7 +67,7 @@ docker build -t sonnen-battery .
 docker run -p 3000:3000 sonnen-battery
 ```
 
-### 6. Project Structure
+### 7. Project Structure
 
 ```
 ├── app/                        # Main app source code
@@ -93,5 +101,3 @@ This project uses [Tailwind CSS](https://tailwindcss.com/) for utility-first sty
 ## License
 
 MIT
-
----
