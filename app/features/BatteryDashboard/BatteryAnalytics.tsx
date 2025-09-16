@@ -1,5 +1,3 @@
-"use client";
-
 import { use, useMemo, useState } from "react";
 import {
   Activity,
