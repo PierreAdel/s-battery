@@ -1,40 +1,48 @@
-# Welcome to React Router!
+# Sonnen Battery Dashboard
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern, production-ready React application for battery analytics and monitoring, built with React Router, TypeScript, TailwindCSS, and Vite.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- ⚡️ Fast development with Vite
+- 🛣️ Routing with React Router
+- 🎨 Styled with TailwindCSS
+- 🧪 Unit and component testing with Vitest, Jest, and React Testing Library
+- 📦 TypeScript for type safety
+- 📊 Battery analytics dashboard with charts (Recharts)
+- 🧩 Modular UI components (Button, Badge, Card, etc.)
+- 🔄 Data loading and async state management
+- 🐳 Docker-ready for deployment
 
 ## Getting Started
 
-### Installation
+### 1. Installation
 
-Install the dependencies:
+Clone the repository and install dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
+### 2. Development
 
-Start the development server with HMR:
+Start the development server with hot module replacement:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-## Building for Production
+### 3. Running Tests
+
+Run all unit and component tests:
+
+```bash
+npm test
+```
+
+### 4. Building for Production
 
 Create a production build:
 
@@ -42,46 +50,48 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+### 5. Docker Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
+Build and run the app using Docker:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t sonnen-battery .
+docker run -p 3000:3000 sonnen-battery
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+### 6. Project Structure
 
 ```
+├── app/                        # Main app source code
+│   ├── features/               # Feature modules (e.g., BatteryDashboard)
+│   ├── components/             # App-level or shared components
+│   ├── lib/                    # Shared libraries and utilities
+│   ├── utils/                  # Utility functions
+│   ├── routes/                 # Application routes
+│   └── types/                  # TypeScript types
+│
+├── public/                     # Static assets
+├── coverage/                   # Test coverage reports
+├── vite.config.ts              # Vite configuration
+├── tailwind.config.js          # TailwindCSS configuration
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+└── README.md
 ```
 
 ## Styling
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+This project uses [Tailwind CSS](https://tailwindcss.com/) for utility-first styling. You can customize styles in `tailwind.config.js`.
+
+## Contributing
+
+1. Fork the repo and create your branch: `git checkout -b my-feature`
+2. Make your changes and add tests
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin my-feature`
+5. Open a pull request
+
+## License
+
+MIT
 
 ---
-
-Built with ❤️ using React Router.
